@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app01.apps.App01Config',
+    'web.apps.WebConfig',
 ]
 
 MIDDLEWARE = [
@@ -116,10 +117,46 @@ USE_L10N = True
 USE_TZ = True
 
 
+#####  短信配置  ####
+#腾讯云短信应用的 app_id
+TENCENT_SMS_APP_ID = 6666
+# 腾讯云短信应用的app_key
+TENCENT_SMS_APP_KEY = "66666"
+#腾讯云短信签名内容
+TENCENT_SMS_SIGN = "DemoLi"
+
+
+TENCENT_SMS_TEMPLATE = {
+    'register':590049,
+    'login':590050,
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379", # 安装redis的主机的 IP 和 端口
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {
+                "max_connections": 1000,
+                "encoding": 'utf-8'
+            },
+            #"PASSWORD": "foobared" # redis密码
+        }
+    }
+}
+
+
+
 try:
     from .local_settings import *
 except ImportError:
