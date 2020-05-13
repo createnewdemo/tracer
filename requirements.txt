@@ -1,7 +1,21 @@
 appdirs==1.4.3
+certifi==2020.4.5.1
+chardet==3.0.4
 distlib==0.3.0
 Django==1.11.28
-filelock==3.0pip install qcloudsms_py.12
+django-redis==4.11.0
+filelock==3.0.12
+get==2019.4.13
+idna==2.9
+Pillow==7.1.2
+post==2019.4.13
+public==2019.4.13
 pytz==2019.3
+qcloudsms-py==0.1.4
+query-string==2019.4.13
+redis==3.4.1
+request==2019.4.13
+requests==2.23.0
 six==1.14.0
+urllib3==1.25.9
 virtualenv==20.0.18
