@@ -2,7 +2,7 @@ appdirs==1.4.3
 certifi==2020.4.5.1
 chardet==3.0.4
 distlib==0.3.0
-Django==1.11.28
+Django==1.11.29
 django-redis==4.11.0
 filelock==3.0.12
 get==2019.4.13
